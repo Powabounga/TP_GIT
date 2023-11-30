@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Créer une nouvelle tâche</title>
+  </head>
+  <body>
+    <h1>Créer une nouvelle tâche</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Créer</button>
+    </form>
+    <a href="{% url 'task_list' %}">Retour à la liste des tâches</a>
+  </body>
+</html>

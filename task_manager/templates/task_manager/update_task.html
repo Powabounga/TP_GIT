@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modifier la tâche "{{ task.title }}"</title>
+  </head>
+  <body>
+    <h1>Modifier la tâche "{{ task.title }}"</h1>
+    <form method="post">
+      {{ csrf_token }} {{ form.as_p }}
+      <button type="submit">Modifier</button>
+    </form>
+    <a href="{% url 'task_list' %}">Retour à la liste des tâches</a>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Supprimer la tâche "{{ task.title }}"</title>
+  </head>
+  <body>
+    <h1>Supprimer la tâche {{ task.title }}</h1>
+    <p>Etes-vous sûr de vouloir supprimer cette tâche ?</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Supprimer</button>
+    </form>
+    <a href="{% url 'task_list' %}"
+      >Annuler et retourner à la liste des tâches</a
+    >
+  </body>
+</html>
